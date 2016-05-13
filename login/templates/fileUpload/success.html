@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block title %}FileUpload Successful{% endblock %}
+{% block head %}
+ BookMark Manager
+{% endblock %}
+{% block content %}
+<br/>
+<center>
+<div id="loginBodiv">
+    <p>Bookmark file has been uploaded successfully. Click <a  href ="/logout/">here</a> to logout.</p>
+
+
+   <p></p>
+   <br/>
+   Bookmarks:
+   <table border="2">
+    <tr>
+        <th>Link</th>
+        <th>Date Added</th>
+	<th>Title</th>
+    </tr>
+    {% for item in displayList %}
+    <tr> 
+        <td>{{ item.link }}</td>
+        <td>{{ item.adddate }}</td>
+        <td>{{ item.title }}</td>
+    </tr>
+    {% endfor %}
+</table>
+</div>
+</center>
+	
+{% endblock %}
