@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block title %}Upload Bookmark{% endblock %}
+{% block head %}BookMark Manager{% endblock %}
+{% block content %}
+<br/>
+<center>
+<br/>
+<div id="loginBodiv">
+    
+<p>Welcome {{ user.username }} ,<a style="font-size:smaller;" href ="/logout/">(Logout)</a> Upload the bookmark file to view your bookmarks</p>
+    
+
+
+<!-- Upload form. Note enctype attribute! -->
+<form action="." method="post" enctype="multipart/form-data">
+	{% csrf_token %}
+	<p><input type="file" name="file"></input>
+	<p><input class="loginButton" type="submit" value="Upload"/></p>
+
+</form>
+</div>
+</center>
+{% endblock %}
