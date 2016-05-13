@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head>
+        <title>Bookmark Manager |
+        {% block title %}{% endblock %}</title>
+    
+    <style>
+
+	html, body {
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	font-family: 'Helvetica Neue', helvetica, 'microsoft sans serif', arial, sans-serif;
+	}
+
+	#header {
+	border: solid 1px #224a54;
+	background-color:brown;
+	height: 80px;
+	width: 1200px;
+	margin-left: auto;
+	margin-right: auto;
+	}
+
+	#title {
+	color: #F3F3F2;
+	font-size: 16px;
+	text-align: right;
+	font-weight: bolder;
+	padding-right: 15px;
+	}
+
+	#snippet {
+	font-size: 14px;
+	color: #D0E9C4;
+	padding-right: 15px;
+	text-align: right;
+	}
+
+	#loginBodiv {
+	background: none repeat scroll 0 0 #FFFFFF;
+	height: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 2px;
+	width: 600px;
+	overflow: visible;
+	}
+
+	.loginButton {
+	width:80px;
+	height: 30px;
+	background-color: rgb(255, 66, 70);
+	background: -webkit-gradient(linear, 0 top, 0 bottom, from(#f66733), to(#d64713));
+	border-color: #224a54;
+	font-weight: bold;
+	color: white;
+	font-size: 12px;
+	letter-spacing: 1px;
+	}			
+
+    </style>
+    </head>
+    <body>
+	<div id="header" style="overflow: none;">
+		<div id="title">
+			<H3>{% block head %}{% endblock %}</H3>
+		</div>
+		<div id="snippet">
+			<H4>Version 1.0</H4>
+		</div>
+	</div>
+        {% block content %}{% endblock %}
+    </body>
+</html>
